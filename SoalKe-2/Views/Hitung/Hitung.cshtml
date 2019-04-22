@@ -1,0 +1,42 @@
+﻿@model SoalKe_2.Models.PersegiPanjang
+
+@{
+    ViewData["Title"] = "Hitung";
+}
+
+<h1>Hitung</h1>
+
+<h4>PersegiPanjang</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Hitung">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Panjang" class="control-label"></label>
+                <input asp-for="Panjang" class="form-control" />
+                <span asp-validation-for="Panjang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lebar" class="control-label"></label>
+                <input asp-for="Lebar" class="form-control" />
+                <span asp-validation-for="Lebar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Luas" class="control-label"></label>
+                <input asp-for="Luas" class="form-control" readonly/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Keliling" class="control-label"></label>
+                <input asp-for="Keliling" class="form-control" readonly/>
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
